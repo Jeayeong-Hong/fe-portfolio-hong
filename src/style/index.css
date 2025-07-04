@@ -26,11 +26,10 @@ html {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
+
 
 a {
   font-weight: 500;
@@ -46,6 +45,16 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 
 /* 기존 버튼 스타일은 외부로 분리됨 */
 /* .start-button 등은 필요 시 button.css에서 관리 */
