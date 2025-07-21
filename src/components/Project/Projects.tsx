@@ -2,14 +2,16 @@ import { useState, useEffect } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
 import FullscreenImageModal from "./FullscreenImageModal";
+import { projects } from "../../data/projects";
+import { Project } from "../../types/project"; // types 폴더가 없다면 위에 따로 정의해도 됩니다
 
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState(null);
-  const [fullscreenImages, setFullscreenImages] = useState([]);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [fullscreenImages, setFullscreenImages] = useState<string[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const handleEsc = (event) => {
+    const handleEsc = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setSelectedProject(null);
         setFullscreenImages([]);
@@ -19,7 +21,7 @@ export default function Projects() {
     return () => window.removeEventListener("keydown", handleEsc);
   }, []);
 
-  const handleOpenFullscreen = (images, index) => {
+  const handleOpenFullscreen = (images: string[], index: number) => {
     setFullscreenImages(images);
     setCurrentIndex(index);
   };
@@ -29,16 +31,23 @@ export default function Projects() {
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
 
-        <ProjectCard
-          title="개발자 유형 테스트"
-          description="간단한 질문으로 개발자 유형을 알려주는 웹 앱."
-          image="/images/devtest_start.png"
-          onClick={() => setSelectedProject("devtest")}
-        />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <div key={project.id}>
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                image={project.images[0].src}
+                onClick={() => setSelectedProject(project)}
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
-      {selectedProject === "devtest" && (
+      {selectedProject && (
         <ProjectModal
+          project={selectedProject}
           onClose={() => setSelectedProject(null)}
           handleOpenFullscreen={handleOpenFullscreen}
         />
@@ -48,12 +57,16 @@ export default function Projects() {
         <FullscreenImageModal
           images={fullscreenImages}
           currentIndex={currentIndex}
-          handlePrev={() => setCurrentIndex((prev) =>
-            prev === 0 ? fullscreenImages.length - 1 : prev - 1
-          )}
-          handleNext={() => setCurrentIndex((prev) =>
-            prev === fullscreenImages.length - 1 ? 0 : prev + 1
-          )}
+          handlePrev={() =>
+            setCurrentIndex((prev) =>
+              prev === 0 ? fullscreenImages.length - 1 : prev - 1
+            )
+          }
+          handleNext={() =>
+            setCurrentIndex((prev) =>
+              prev === fullscreenImages.length - 1 ? 0 : prev + 1
+            )
+          }
           handleClose={() => setFullscreenImages([])}
         />
       )}

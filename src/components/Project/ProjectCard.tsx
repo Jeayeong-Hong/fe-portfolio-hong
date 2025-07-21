@@ -1,4 +1,11 @@
-export default function ProjectCard({ title, description, image, onClick }) {
+type ProjectCardProps = {
+    title: string;
+    description: string;
+    image: string;
+    onClick: () => void;
+};
+
+export default function ProjectCard({ title, description, image, onClick }: ProjectCardProps) {
     return (
         <div
             className="bg-white shadow-md rounded-xl overflow-hidden hover:shadow-lg transition cursor-pointer w-64 mx-auto"
