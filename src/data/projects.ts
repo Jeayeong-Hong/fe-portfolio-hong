@@ -52,7 +52,7 @@ export const projects: Project[] = [
             { src: "/images/imagesearch_home.png", alt: "홈" },
             { src: "/images/imagesearch_result.png", alt: "결과" },
         ],
-        github: "https://github.com/Jeayeong-Hong/image-searcher",
-        site: "https://image-searcher.vercel.app/"
+        github: "https://github.com/Jeayeong-Hong/image-search-app",
+        site: "https://image-serch-app.vercel.app/"
     }
 ];
