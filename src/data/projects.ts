@@ -53,6 +53,6 @@ export const projects: Project[] = [
             { src: "/images/imagesearch_result.png", alt: "결과" },
         ],
         github: "https://github.com/Jeayeong-Hong/image-search-app",
-        site: "https://image-serch-app.vercel.app/"
+        site: "https://image-search-app-xgoney.vercel.app/"
     }
 ];
