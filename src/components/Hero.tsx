@@ -13,18 +13,19 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          안녕하세요, 프론트엔드 개발자{" "}
-          <span className="text-blue-500">홍재영</span>입니다.
+          프론트엔드 개발자{" "}<br />
         </motion.h1>
-
+        <motion.h1>
+          <span className="text-blue-500">홍재영</span>
+        </motion.h1>
         <motion.p
           className="text-lg text-gray-600 max-w-xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
         >
-          사용자에게 즐거움을 주는 UI를 만드는 데 관심이 많습니다.{" "}
-          TypeScript, React, Tailwind 등을 사용한 프로젝트를 소개합니다.
+          <br />
+          저의 포트폴리오를 방문해주셔서 감사합니다.{" "}
         </motion.p>
       </div>
     </section>
