@@ -34,9 +34,9 @@ React에서 사용자 입력을 처리하고, Flask에서 외부 이미지 API�
 
 ## Getting Started / 실행 방법
 
-### Frontend
+### fe-portfolio-hong
 
 ```bash
-cd frontend
+cd fe-portfolio-hong
 npm install
 npm run dev
