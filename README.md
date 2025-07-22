@@ -31,13 +31,6 @@ React에서 사용자 입력을 처리하고, Flask에서 외부 이미지 API�
 
 ---
 
-## Screenshots / 주요 화면
-
-| Home | Search Result | Image Zoom |
-|------|----------------|-------------|
-| ![home](./screenshots/home.png) | ![result](./screenshots/result.png) | ![zoom](./screenshots/zoom.png) |
-
----
 
 ## Getting Started / 실행 방법
 
