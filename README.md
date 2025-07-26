@@ -31,25 +31,20 @@ React와 TypeScript로 제작한 개인 포트폴리오 웹사이트입니다. �
 
 ---
 
-## Screenshots / 주요 화면
-
-| About Section | Project List | Modal View |
-|---------------|--------------|-------------|
-| ![about](./screenshots/about.png) | ![projects](./screenshots/projects.png) | ![modal](./screenshots/modal.png) |
-
----
-
 ## Getting Started / 실행 방법
 
 
 ```bash
 1. Clone the repository  
    레포지토리를 클론합니다.
+
 git clone https://github.com/your-username/fe-portfolio-hong.git
 cd fe-portfolio-hong
+
 2. Install dependencies
 의존성을 설치합니다.
 npm install
+
 3. Start the development server
 개발 서버를 실행합니다.
 npm run dev
