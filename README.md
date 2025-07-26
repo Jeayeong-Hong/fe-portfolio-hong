@@ -1,42 +1,65 @@
-# Image Search App / 이미지 검색기
+# FE Portfolio – Hong Jaeyoung / 프론트엔드 포트폴리오 - 홍재영
 
-This project is a simple image search application built with React and Flask.  
-사용자가 입력한 검색어를 기반으로 이미지를 조회하고 시각적으로 출력하는 웹 애플리케이션입니다.
-
-The frontend communicates with a custom Flask backend to process search requests and retrieve image data asynchronously.  
-React에서 사용자 입력을 처리하고, Flask에서 외부 이미지 API를 호출해 결과를 응답합니다.
+This is a personal portfolio site built with React and TypeScript, designed to showcase development projects and frontend skills.  
+React와 TypeScript로 제작한 개인 포트폴리오 웹사이트입니다. 주요 프로젝트와 기술 역량을 소개하는 데 중점을 두었습니다.
 
 ---
 
 ## Features / 주요 기능
 
-- Search for images based on user input  
-  사용자 검색어를 기반으로 이미지 검색
-- Communicate with an external image API through a Flask backend  
-  Flask 백엔드를 통해 외부 이미지 API와 통신
-- Fullscreen modal image viewer with navigation  
-  이미지 클릭 시 전체 화면 모달 뷰어 제공
-- Responsive layout using Tailwind CSS  
-  Tailwind CSS 기반 반응형 레이아웃 구성
-- Copyable URL for sharing search results  
-  검색 결과 공유를 위한 URL 복사 기능 포함
+- Project showcase with modal-based detail view  
+  모달을 활용한 프로젝트 상세 보기 기능 제공
+- Responsive design optimized for desktop and mobile  
+  데스크톱과 모바일 환경에 대응하는 반응형 레이아웃 구성
+- Section-based smooth scroll navigation  
+  섹션 간 부드러운 스크롤 이동 및 네비게이션 구성
+- Componentized and scalable architecture  
+  유지보수와 확장에 용이한 컴포넌트 기반 구조
+- Framer Motion and Tailwind CSS for consistent UI/UX  
+  Framer Motion과 Tailwind CSS 기반의 일관된 디자인 시스템 구성
 
 ---
 
 ## Tech Stack / 사용 기술
 
-- **Frontend**: React, JavaScript, Tailwind CSS, Axios  
-- **Backend**: Flask (Python), REST API  
-- **Deployment**: Vercel (Frontend), PythonAnywhere (Backend)
+- **Framework**: React  
+- **Language**: TypeScript  
+- **Styling**: Tailwind CSS  
+- **Animation**: Framer Motion  
+- **Build Tool**: Vite  
+- **Deployment**: Vercel
 
 ---
 
+## Screenshots / 주요 화면
+
+| About Section | Project List | Modal View |
+|---------------|--------------|-------------|
+| ![about](./screenshots/about.png) | ![projects](./screenshots/projects.png) | ![modal](./screenshots/modal.png) |
+
+---
 
 ## Getting Started / 실행 방법
 
-### fe-portfolio-hong
 
 ```bash
+1. Clone the repository  
+   레포지토리를 클론합니다.
+git clone https://github.com/your-username/fe-portfolio-hong.git
 cd fe-portfolio-hong
+2. Install dependencies
+의존성을 설치합니다.
 npm install
+3. Start the development server
+개발 서버를 실행합니다.
 npm run dev
+```
+## Deployment / 배포
+This project is deployed via Vercel.
+해당 프로젝트는 Vercel을 통해 배포되었습니다.
+
+🔗 Live Site: https://your-portfolio.vercel.app
+
+## License
+This project is for personal portfolio purposes only.
+이 프로젝트는 개인 포트폴리오 용도로 제작되었습니다.
