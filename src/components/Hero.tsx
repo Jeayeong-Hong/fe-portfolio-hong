@@ -25,7 +25,7 @@ export default function Hero() {
             홍재영
           </span>
         </motion.h1>
-        //
+
         <motion.p
           className="text-lg text-gray-700 max-w-xl mx-auto mt-6"
           initial={{ opacity: 0 }}
