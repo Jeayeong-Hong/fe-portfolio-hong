@@ -49,7 +49,7 @@ npm run dev
 This project is deployed via Vercel.
 해당 프로젝트는 Vercel을 통해 배포되었습니다.
 
-🔗 Live Site: https://your-portfolio.vercel.app
+Live Site:https://fe-portfolio-hong.vercel.app/
 
 ## License
 This project is for personal portfolio purposes only.
